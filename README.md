@@ -38,11 +38,11 @@ const handleFailUpload = (guid: string) => {}
 
 |  参数   | 类型  |  是否必传 | 默认值 | 备注 |
 |  ----  | ----  | ----  | ----  | ----  |
-| `fetchUploadUrl`  | `(file: File) => Promise<UploadInfo>` |  `UploadInfo` | `true` | - | 与后台交互获取多文件上传COS的地址和文件id，为自身的业务逻辑 |
+| `fetchUploadUrl`  | `(file: File) => Promise<UploadInfo>` | `true`  | - | - | 与后台交互获取多文件上传COS的地址和文件id，为自身的业务逻辑 |
 | `acceptSuffix`  | `string[]` | `false` | `[".png", ".jpg", "ppt", "mp4", ".jpeg", ".mp3"]` | 允许的后缀 |
 | `maxSize` | `number` | `false` | 524288000 | 文件最大字节数 |
 | `checkFile` | `(file: File) =>  boolean` | `fase` | - | 若不传该参数，则仅对文件做大小和后缀校验；返回值`true`为通过校验，`false`为不通过校验，不会进行文件上传 |
-| `notification` | `boolean` | `false` | `true` | 内置文件校验不通过时是否通过`message`进行通知` |
+| `notification` | `boolean` | `false` | `true` | 内置文件校验不通过时是否通过`message`进行通知 |
 
 其中`UploadInfo`的类型如下：
 

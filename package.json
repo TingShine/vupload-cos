@@ -1,6 +1,6 @@
 {
   "name": "vupload-cos",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "upload component",
   "module": "./dist/index.js",
   "browser": "./dist/index.js",
