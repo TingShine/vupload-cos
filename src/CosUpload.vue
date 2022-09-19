@@ -59,6 +59,14 @@ export default defineComponent({
     const message = useMessage(props.notification);
 
     const onBeforeUpload = (file: UploadFile) => {
+      if (props?.checkFile) {
+        if (!props.checkFile(file)) {
+          return false || Upload.LIST_IGNORE;
+        }
+
+        return true;
+      }
+
       const { name, size } = file;
 
       const suffix = "." + name.split(".")[1] || "";
@@ -70,10 +78,6 @@ export default defineComponent({
       const maxSize = props?.maxSize || 0;
       if (maxSize < (size || 0)) {
         message.error(`上传的文件的大小超过${maxSize / 1024}KB限制`);
-        return false || Upload.LIST_IGNORE;
-      }
-
-      if (props?.checkFile && !props.checkFile(file)) {
         return false || Upload.LIST_IGNORE;
       }
 
