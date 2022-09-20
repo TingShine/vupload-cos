@@ -1,7 +1,7 @@
 {
   "name": "vupload-cos",
-  "version": "1.4.4",
-  "description": "upload component",
+  "version": "1.4.6",
+  "description": "File upload component based on ant design vue, which can be used to upload to COS ",
   "module": "./dist/index.js",
   "browser": "./dist/index.js",
   "type": "module",

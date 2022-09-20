@@ -1,4 +1,17 @@
-# vupload-cos
+<h1 align="center">vupload-cos</h1>
+
+<div align="center">
+
+[![NPM Version][npm-image]][npm-url] [![Download][download-image]][download-url]
+
+[npm-url]:https://www.npmjs.com/package/vupload-cos
+[npm-image]: https://img.shields.io/badge/npm-v1.4.x-yellow
+[download-url]: https://www.npmjs.com/package/vupload-cos
+[download-image]: https://img.shields.io/badge/downloads-450%2Fweek-green
+
+File upload component based on ant design vue, which can be used to upload to COS
+
+</div>
 
 基于vue3和ant-design-vue的腾讯云对象存储COS上传文件组件。该组件主要服务于文件上传功能，上传文件前发送文件信息给后台，后台计算获得文件上传至COS的地址返回组件，组件再根据远程地址将文件进行推送，可用于业务无关的文件上传服务
 
